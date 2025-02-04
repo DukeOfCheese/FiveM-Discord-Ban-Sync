@@ -7,6 +7,5 @@ lua54 'yes'
 
 server_scripts {
     'server/server.lua',
+    'config.lua',
 }
-
-shared_script 'config.lua'
