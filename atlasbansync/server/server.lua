@@ -22,9 +22,8 @@ AddEventHandler('playerConnecting', function(_, _, deferrals)
     deferrals.update('[Atlas Ban Sync] Checking if you are banned in the linked Discord...')
     local id = GetDiscordID(source)
     if not id then
-        if Config.misc.requireDiscordToJoin then
+        if not Config.misc.requireDiscordToJoin then
             deferrals.done()
-
         else
             deferrals.done('[Atlas Ban Sync] You are required to have a connected Discord account to join this server!')
         end
