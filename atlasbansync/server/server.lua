@@ -1,4 +1,18 @@
+CreateThread(function()
+    if Config.bot.guild == nil or Config.bot.guild == "YOUR_GUILD_ID" or Config.bot.token == nil or Config.bot.token == "YOUR_BOT_TOKEN" then
+        print('^1[Atlas Ban Sync]^7 Missing required fields in config.lua')
+        return
+    end
+
+    if not Config.misc.requireDiscordToJoin then
+        print('^1[Atlas Ban Sync]^7 requireDiscordToJoin is set to false, this is not recommended and may cause issues.')
+    end
+end)
+
+
+
 local function GetDiscordID(player)
+
     local discord = GetPlayerIdentifierByType(player, 'discord')
     if discord then
         local id = discord:gsub('discord:', '')
