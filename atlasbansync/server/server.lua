@@ -12,7 +12,7 @@ AddEventHandler('playerConnecting', function(name, setKickReason, deferrals)
     deferrals.update('[Atlas Ban Sync] Checking if you are banned in the linked Discord...')
     local src = source
     local discordId = GetDiscordID(src)
-    if discordId == 0 then
+    if not discordId then
         if Config.RequireDiscordToJoin then
             deferrals.done()
         else
