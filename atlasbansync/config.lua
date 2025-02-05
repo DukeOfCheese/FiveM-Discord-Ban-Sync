@@ -1,6 +1,11 @@
-Config = {
-    GuildID = 123,
-    Token = 'TOKEN',
-    RequireDiscordToJoin = false,
-    BanMessage = "You are banned from this Discord server!"
+Config = {}
+
+Config.bot = {
+    guild = "YOUR_GUILD_ID",
+    token = "YOUR_BOT_TOKEN"
+}
+
+Config.misc = {
+    requireDiscordToJoin = true,
+    banMessage = "You are banned from this Discord server!"
 }
